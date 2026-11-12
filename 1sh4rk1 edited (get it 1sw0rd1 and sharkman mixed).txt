@@ -1,6 +1,3 @@
--- nothing i do ever works out. i am pathetic. fairwell. ive tried everything to be something and im tired.
--- leaks by c00l857746 aka k00p/Mayro070 aka cheetos aka doritos/john aka c00l8577460 aka contentdeleted39264 aka 13anz/that ep1kzkidd from 2022/DeleteCar/1sw0rd1 aka 1sw0rd2 aka sillypurplething aka purple himself on may 15th, 2026.
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local ScrollingFrame1 = Instance.new("ScrollingFrame")
@@ -1661,7 +1658,7 @@ btools.BorderSizePixel = 2
 btools.Position = UDim2.new(0.641758204, 0, -0.28228727, 0)
 btools.Size = UDim2.new(0, 165, 0, 33)
 btools.Font = Enum.Font.Cartoon
-btools.Text = "Btools [HD]"
+btools.Text = "inf highway f3x vuln"
 btools.TextColor3 = Color3.fromRGB(255, 255, 255)
 btools.TextScaled = true
 btools.TextSize = 14.000
@@ -16733,11 +16730,25 @@ re.MouseButton1Down:Connect(function()
 end)
 
 btools.MouseButton1Down:Connect(function()
-	local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
+	local function findGearRemote()
+    for _, d in ipairs(game:GetDescendants()) do
+        if d:IsA("RemoteFunction") and d.Name == "RemoteFunction" then
+            local ancestor = d:FindFirstAncestor("gear machine chest")
+            if ancestor then
+                print("remote at:", d:GetFullName())
+                return d
+            end
+        end
+    end
+    warn("no remote or add lowercase/uppercade letters")
+    return nil
+end
 
-	RequestCommand:InvokeServer(";btools me ;give me b")
-end)
+local remote = findGearRemote()
+if remote then
+    local ok, result = pcall(remote.InvokeServer, remote, "give gear", 142785488)
+    print("the result:", ok, result)
+end
 
 task.defer(function()
 	local script = Instance.new('Script', page6button)
