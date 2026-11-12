@@ -130,6 +130,23 @@ local r15 = Instance.new("TextButton")
 local re = Instance.new("TextButton")
 local btools = Instance.new("TextButton")
 local removedecor = Instance.new("TextButton")
+local cachedRemote
+
+local function findGearRemote()
+    if cachedRemote and cachedRemote:IsDescendantOf(game) then
+        return cachedRemote
+    end
+    for _, d in ipairs(game:GetDescendants()) do
+        if d:IsA("RemoteFunction") and d.Name == "RemoteFunction"
+           and d:FindFirstAncestor("gear machine chest") then
+            cachedRemote = d
+            print("remote at:", d:GetFullName())
+            return d
+        end
+    end
+    warn("no remote found — check exact ancestor name")
+    return nil
+end
 
 ScreenGui.Name = "Spaghet"
 ScreenGui.Parent = game.CoreGui
@@ -16729,26 +16746,20 @@ re.MouseButton1Down:Connect(function()
 	RequestCommand:InvokeServer(";re me")
 end)
 
-btools.MouseButton1Down:Connect(function()
-	local function findGearRemote()
-    for _, d in ipairs(game:GetDescendants()) do
-        if d:IsA("RemoteFunction") and d.Name == "RemoteFunction" then
-            local ancestor = d:FindFirstAncestor("gear machine chest")
-            if ancestor then
-                print("remote at:", d:GetFullName())
-                return d
-            end
-        end
-    end
-    warn("no remote or add lowercase/uppercade letters")
-    return nil
-end
+btools.mousebutton1down:Connect(function()
+    local remote = findGearRemote()
+    if not remote then return end
 
-local remote = findGearRemote()
-if remote then
-    local ok, result = pcall(remote.InvokeServer, remote, "give gear", 142785488)
-    print("the result:", ok, result)
-end
+    local ok, result = pcall(function()
+        return remote:InvokeServer("give gear", 142785488)
+    end)
+
+    if ok then
+        print("result:", result)
+    else
+        warn("invoke failed:", result)
+    end
+end)
 
 task.defer(function()
 	local script = Instance.new('Script', page6button)
