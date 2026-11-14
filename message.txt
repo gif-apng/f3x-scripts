@@ -6296,11 +6296,11 @@ musicbutton("sharks theme",function()
 	RequestCommand:InvokeServer(";music 1847661821 ;pitch 0.5 ;volume inf")
 end)
 
-musicbutton("return of the tres/c00l music",function()
+musicbutton("skeleton dubstep",function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
 
-	RequestCommand:InvokeServer(";music 123705905892714 ;pitch 0.129 ;volume inf")
+	RequestCommand:InvokeServer(";music 129890330200593 ;pitch 3.1")
 end)
 
 musicbutton("bloodpop",function()
