@@ -2742,7 +2742,7 @@ decalbutton("Santa Cat", 49497630, Color3.new(0,1,1))
 decalbutton("Invisible Kitty", 2483185, Color3.new(0,1,1))
 decalbutton("Orange Helmet Cat", 5441921, Color3.new(0,1,1))
 decalbutton("Sherlock Squirrel", 11853994, Color3.new(0,1,1))
-decalbutton("John Cena", 46510487, Color3.new(1,1,0))
+decalbutton("mr krabs", 4575846704, Color3.new(1,1,0))
 decalbutton("Scary Face", 83046327, Color3.new(0.5, 0, 0))
 
 decalbutton("Rain", 574772793, Color3.new(1, 0.278431, 0.278431))
