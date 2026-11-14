@@ -6303,11 +6303,11 @@ musicbutton("skeleton dubstep",function()
 	RequestCommand:InvokeServer(";music 129890330200593 ;pitch 3.1")
 end)
 
-musicbutton("bloodpop",function()
+musicbutton("thomas the dank train",function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
 
-	RequestCommand:InvokeServer(";music 106055808239201 ;pitch 0.18 ;volume inf")
+	RequestCommand:InvokeServer(";music 102994208573607 ;pitch 4.1 ;volume inf")
 end)
 
 musicbutton("bodypartz",function()
@@ -6317,11 +6317,11 @@ musicbutton("bodypartz",function()
 	RequestCommand:InvokeServer(";music 127653283576622 ;pitch 1.15 ;volume inf")
 end)
 
-musicbutton("sugarcrash",function()
+musicbutton("oh yeah mr krabs",function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
 
-	RequestCommand:InvokeServer(";music 118510088348722 ;pitch 0.205 ;volume inf")
+	RequestCommand:InvokeServer(";music 128674713531289 ;pitch 10.4 ;volume inf")
 end)
 
 musicbutton("raining men",function()
@@ -6433,7 +6433,7 @@ musicbutton("bobby2pistolz",function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
 
-	RequestCommand:InvokeServer(";music 110768151443628 ;pitch 0.07 ;volume inf")
+	RequestCommand:InvokeServer(";music 133129994566782 ;pitch 2 ;volume inf")
 end)
 
 musicbutton("n hardbass 1",function()
