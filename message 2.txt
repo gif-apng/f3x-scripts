@@ -6433,7 +6433,7 @@ musicbutton("bobby2pistolz",function()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
 
-	RequestCommand:InvokeServer(";music 133129994566782 ;pitch 2 ;volume inf")
+	RequestCommand:InvokeServer(";music 133129994566782 ;pitch 1.8 ;volume inf")
 end)
 
 musicbutton("n hardbass 1",function()
