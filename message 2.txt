@@ -2711,9 +2711,9 @@ decalbutton("1x3x5x6 old 1", 280577900, Color3.new(1,0,0))
 decalbutton("1x3x5x6 old 2", 280149353, Color3.new(1,0,0))
 
 decalbutton("k00pkidd", 9422866248, Color3.new(0,1,0))
-decalbutton("cZerkidd", 95740991147385, Color3.new(1,1,1))
-decalbutton("roadblocks", 109172666525942, Color3.new(0.9,0.9,0.9))
-decalbutton("d3crypted9", 128468452152688, Color3.new(0.9,0,0))
+decalbutton("shark sky", 121060340306109, Color3.new(1,1,1))
+decalbutton("shark decal", 86256210263215, Color3.new(0.9,0.9,0.9))
+decalbutton("shark particle", 124545535419409, Color3.new(0.9,0,0))
 decalbutton("roblox down(sky)", 7863469635, Color3.new(1,0,0))
 decalbutton("Xx_andresXx", 949837521, Color3.new(1,1,0))
 
